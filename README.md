@@ -6,6 +6,7 @@
 * The project read all feature files and leverage Robot framework API to generate robot tests dynamically according to gherkin scenarios.
 * Folder tests/features contains all feature files with gherkin scenarios inside.
 * Folder tests/step_def contains all files with robot keywords that correspond to the gherkin steps.
+* In order to run the tests just need to execute the file main.py and a folder with execution report will be generated.
 
 
 ## Gherkin Sintax:
