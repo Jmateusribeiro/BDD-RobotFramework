@@ -9,29 +9,29 @@
 * In order to run the tests just need to execute the file main.py and a folder with execution report will be generated.
 
 
+### If one want to reuse the project just need to put the feature files inside the features folder and the robot keywords file inside step_defs folder
+
+
 ## Gherkin Sintax:
 
-  This project, for now, only recognize basic gherkin keywords.
+  This project, for now, only recognize the most used gherkin keywords.
   
   Recognized Gherkin keywords:
   
   - Feature;
-  - Scenario;
-  - Scenario Outline;
-  - Examples;
+  - Scenario / Example;
+  - Scenario Outline / Scenario Template;
+  - Examples Table;
   - Given, When, Then, And, But;
-  - | (Data Tables);
   - \# (Comments)
     
   Gherkin Keywords to add:
   
   - Rule;
   - Background;
-  - Example;
-  - Scenarios;
-  - Scenario Template:
   - """ (Doc Strings)
   - @ (Tags)
+  - | (Data Tables)
 
   
  

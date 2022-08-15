@@ -13,7 +13,7 @@ Feature: Feature1
       | lindsay.ferguson@reqres.in | xpto     | QpwL5tke4Pnpja7X8 |
 
 
-  Scenario Outline: Same Example
+  Scenario Template: Same Example
     Given email and password are definied as <email> and <password>
     When registration is executed
     Then the correct token is returned: <token>
@@ -26,6 +26,12 @@ Feature: Feature1
 
   # comment
   Scenario: Scenario Example
+    Given email and password are definied as eve.holt@reqres.in and xpto
+    When registration is executed
+    Then the correct token is returned: QpwL5tke4Pnpja7X4
+
+  #comment
+  Example: Same Example
     Given email and password are definied as eve.holt@reqres.in and xpto
     When registration is executed
     Then the correct token is returned: QpwL5tke4Pnpja7X4

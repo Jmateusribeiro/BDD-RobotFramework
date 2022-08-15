@@ -25,10 +25,13 @@ class SuiteRunner:
         else:
             suite_name = self.suites[0].name
 
-        ResultWriter(*self.files).write_results(
-            report=report_folder + '/output.html',
-            log=report_folder + '/log.html',
-            logtitle='Report',
-            reporttitle='Report Detail',
-            name=suite_name
-        )
+        try:
+            ResultWriter(*self.files).write_results(
+                report=report_folder + '/output.html',
+                log=report_folder + '/log.html',
+                logtitle='Report',
+                reporttitle='Report Detail',
+                name=suite_name
+            )
+        except Exception as e:
+            raise Exception(e.args[0])
