@@ -1,12 +1,8 @@
 from robot.api import TestSuite
 from internal.utils import find_variables, get_robot_files
 import re
-from settings import feature_files_dir, keywords_dir
+from settings import feature_files_dir, keywords_dir, delimiters, scenario_outline_chars
 from internal.gherkin_scenario import GherkinScenario
-
-
-delimiters = 'Scenario:|Scenario Outline:|Example:|Scenario Template:'
-scenario_outline_chars = ['<', '>', 'Examples:', '|']
 
 
 class RobotSuite(TestSuite):

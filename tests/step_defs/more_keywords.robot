@@ -7,6 +7,6 @@ Variables           ../../settings.py
 
 
 *** Keywords ***
-the correct token is returned: ${token}
+The Correct Token Is Returned: ${token}
     [documentation]     Generic Keyword to validate login token
-    should be equal    ${resp}[token]         ${token}        Token returned isn't the expected: ${token}
+    Should Be Equal    ${resp}[token]         ${token}        Token returned isn't the expected: ${token}

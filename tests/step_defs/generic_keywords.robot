@@ -7,28 +7,23 @@ Variables           ../../settings.py
 
 
 *** Keywords ***
-run post request
+Run Post Request
     [Arguments]    ${host}  ${url}      ${body}
     Create Session  session  ${host}
     ${resp}=  POST On Session  session  ${url}  data=${body}      expected_status=any     headers=${contentType}      verify=${False}
     Status Should Be  200  ${resp}      ${resp.reason}
-    log     resposta: ${resp.json()}
+    Log     resposta: ${resp.json()}
     [Return]    ${resp.json()}
 
 
-email and password are definied as ${email} and ${password}
+Email And Password Are Definied As ${email} And ${password}
     [documentation]     Generic Keyword to generate body with email and password
-    ${body}=    set Variable    {"email": "${email}", "password": "${password}"}
-    set test variable       ${body}     ${body}
+    ${body}=    Set Variable    {"email": "${email}", "password": "${password}"}
+    Set Test Variable       ${body}     ${body}
 
 
-registration is executed
+Registration Is Executed
     [documentation]     Generic Keyword to generate body with email and password
 
-    ${resp}=    run post request    ${API_HOST}     ${REGISTRATION_ENDPOINT}        ${body}
-    set test variable     ${resp}        ${resp}
-
-
-#the correct token is returned: ${token}
-#    [documentation]     Generic Keyword to validate login token
-#    should be equal    ${resp}[token]         ${token}        Token returned isn't the expected: ${token}
+    ${resp}=    Run Post Request    ${API_HOST}     ${REGISTRATION_ENDPOINT}        ${body}
+    Set Test Variable     ${resp}        ${resp}
