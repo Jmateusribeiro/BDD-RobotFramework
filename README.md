@@ -8,6 +8,9 @@
 * Folder tests/step_def contains all files with robot keywords that correspond to the gherkin steps.
 * In order to run the tests just need to execute the file main.py and a folder with execution report will be generated.
 
+    The .env file is committed because this project is only to demonstration purposes.
+    In real projects the .env file, containing critical info, must be add to .gitignore
+
 
 ### If one want to reuse the project just need to put the feature files inside the features folder and the robot keywords file inside step_defs folder
 

@@ -4,34 +4,34 @@ Feature: Feature1
   Scenario Outline: Example
     Given email and password are definied as <email> and <password>
     When registration is executed
-    Then the correct token is returned: <token>
+    Then the correct token is returned
 
     Examples:
-      | email                      | password | token             |
-      | eve.holt@reqres.in         | xpto     | QpwL5tke4Pnpja7X4 |
-      | michael.lawson@reqres.in   | xpto     | QpwL5tke4Pnpja7X7 |
-      | lindsay.ferguson@reqres.in | xpto     | QpwL5tke4Pnpja7X8 |
+      | email                      | password |
+      | eve.holt@reqres.in         | xpto     |
+      | michael.lawson@reqres.in   | xpto     |
+      | lindsay.ferguson@reqres.in | xpto     |
 
 
   Scenario Template: Same Example
     Given email and password are definied as <email> and <password>
     When registration is executed
-    Then the correct token is returned: <token>
+    Then the correct token is returned
 
     Examples:
-      | email                      | password | token             |
-      | eve.holt@reqres.in         | xpto     | QpwL5tke4Pnpja7X4 |
-      | michael.lawson@reqres.in   | xpto     | QpwL5tke4Pnpja7X7 |
-      | lindsay.ferguson@reqres.in | xpto     | QpwL5tke4Pnpja7X8 |
+      | email                      | password |
+      | eve.holt@reqres.in         | xpto     |
+      | michael.lawson@reqres.in   | xpto     |
+      | lindsay.ferguson@reqres.in | xpto     |
 
   # comment
   Scenario: Scenario Example
     Given email and password are definied as eve.holt@reqres.in and xpto
     When registration is executed
-    Then the correct token is returned: QpwL5tke4Pnpja7X4
+    Then the correct token is returned
 
   #comment
   Example: Same Example
     Given email and password are definied as eve.holt@reqres.in and xpto
     When registration is executed
-    Then the correct token is returned: QpwL5tke4Pnpja7X4
+    Then the correct token is returned
